@@ -1,0 +1,44 @@
+slots:
+  city:
+    type: text
+
+
+intents:
+ - greet
+ - bye
+ - affirmative
+ - negative
+ - findRestaurantsByCity
+ - out_of_scope
+
+entities:
+ - city
+
+templates:
+  utter_greet:
+    - Nice to meet you! What can I help you?
+  utter_bye:
+    - Goodbye!
+    - Bye bye!
+    - I look forward to our next meeting
+  utter_affirmative:
+    - Thank you, i always bring best things to you
+    - You're welcome
+    - okay, no problem. What's else?
+  utter_negative:
+    - I'm so sorry
+    - I apologise. I will improve our service.
+  utter_ask_rephrase:
+    - I dont understand. Please type another sentence.
+  utter_ask_city:
+    - text: In what city?
+
+actions:
+ - utter_greet
+ - utter_bye
+ - utter_affirmative
+ - utter_negative
+ - action_restaurants
+ - utter_ask_rephrase
+ - utter_ask_city
+#  - utter_default
